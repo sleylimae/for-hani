@@ -36,6 +36,7 @@ body {
 h1 {
     font-size: 36px;
     color: #ff69b4;
+    margin-top: 100px; /* Added margin-top to prevent it from going behind the header */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -180,4 +181,37 @@ h1 {
     color: #333;
     text-align: center;
     margin-top: 30px;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;  /* Adjusting font size on smaller screens */
+    }
+
+    .sticky-notes {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .sticky-note {
+        width: 45%; /* Make sticky notes take up 45% of the container's width */
+        min-height: 160px;  /* Slightly smaller height */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;  /* Adjust font size further for very small screens */
+    }
+
+    .sticky-note {
+        width: 45%;  /* Make sticky notes appear in two columns */
+        min-height: 150px;  /* Smaller height for mobile */
+    }
+
+    .sticky-notes {
+        justify-content: space-around;
+    }
 }
