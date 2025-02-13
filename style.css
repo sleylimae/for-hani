@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    background-color: #f8f4f2;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+
+.header {
+    background-color: rgb(155, 121, 255);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header h2 {
+    color: white;
+    font-size: 34px;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff69b4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message {
+    font-size: 27px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(251, 131, 191);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button:hover {
+    background-color:rgb(214, 88, 147);
+}
+
+.sticky-notes-heading {
+    font-size: 24px;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sticky-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.final-message {
+    font-size: 49px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #a78bfa;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.sticky-note {
+    background-color: #a78bfa;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    width: 180px;
+    min-height: 180px;  /* Minimum height to avoid shrinking when content is smaller */
+    font-size: 18px;
+    color: #333;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;  /* Hide overflow content */
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column; /* Allow sticky note to adjust based on content */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+    transition: height 0.3s ease; /* Smooth height transition when expanding */
+}
+
+.sticky-note:hover {
+    background-color: rgb(131, 112, 191);
+    transform: translateY(-5px);
+}
+
+.sticky-note .preview {
+    display: block; /* Show preview message initially */
+}
+
+.sticky-note .expanded-content {
+    display: none; /* Hide expanded content initially */
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.sticky-note.expanded .preview {
+    display: none; /* Hide preview message when expanded */
+}
+
+.sticky-note.expanded .expanded-content {
+    display: block; /* Show expanded content when expanded */
+}
+
+.footer {
+    background-color: rgb(100, 83, 152);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    z-index: 1000;
+}
+
+.sticker {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+    max-width: 147px;
+    margin-top: 20px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sticker.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sticker:hover {
+    transform: scale(1.1); 
+}
+
+.response-message {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
